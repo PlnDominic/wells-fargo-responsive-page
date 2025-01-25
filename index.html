@@ -18,11 +18,11 @@
               <div class="nav-list">
                 <div class="item-link">
                   <div class="component-2"></div>
-                  <span class="enroll">Enroll</span>
+                  <a href="#" class="enroll">Enroll</a>
                 </div>
-                <span class="customer-service">Customer Service</span
-                ><span class="atms-locations">ATMs/Locations</span
-                ><span class="espanol">Español</span>
+                <a href="#" class="customer-service">Customer Service</a>
+                <a href="#" class="atms-locations">ATMs/Locations</a>
+                <a href="#" class="espanol">Español</a>
                 <div class="item-form">
                   <div class="input-search">
                     <input class="input" />
@@ -41,11 +41,22 @@
           <div class="form">
             <div class="container-6">
               <div class="component-7">
-                <input class="input-8" /><span class="label-password"
-                  >Password</span
-                >
-                <div class="input-9"></div>
-                <span class="button-unmask-password-show">Show</span>
+                <div class="component-password">
+                  <input 
+                    id="password-input" 
+                    class="component-input" 
+                    type="password" 
+                    name="password" 
+                    placeholder="Password" 
+                  />
+                  <div class="input-9"></div>
+                  <span 
+                    id="toggle-password" 
+                    class="button-unmask-password-show"
+                    onclick="togglePasswordVisibility()"
+                  >Show</span>
+                </div>
+                
               </div>
               <div class="checkbox">
                 <div class="component-a">
@@ -60,9 +71,13 @@
                 devices that aren't used by other people.</span
               >
               <div class="component-f">
-                <input class="component-input" />
+                <input 
+                  id="username-input" 
+                  class="component-input" 
+                  name="username" 
+                  placeholder="Username" 
+                />
                 <div class="rectangle-10"></div>
-                <span class="text-username">Username</span>
                 <div class="input-11"></div>
               </div>
               <div class="component-12"></div>
@@ -161,5 +176,19 @@
         </div>
       </div>
     </div>
+    <script>
+      function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password-input');
+        const toggleButton = document.getElementById('toggle-password');
+        
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleButton.textContent = 'Hide';
+        } else {
+          passwordInput.type = 'password';
+          toggleButton.textContent = 'Show';
+        }
+      }
+    </script>
   </body>
 </html>
