@@ -1,0 +1,12 @@
+# Ignore system and IDE files
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Ignore dependencies and build artifacts
+node_modules/
+dist/
+build/
+*.log
