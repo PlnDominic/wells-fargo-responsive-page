@@ -1452,33 +1452,100 @@ button {
 }
 
 @media screen and (max-width: 480px) {
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
   .main-container {
-    padding-left: 5px;
-    padding-right: 5px;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
   }
 
   .rectangle {
-    padding: 5px 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .flex-row-b {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .flex-row-gray {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
   }
 
   .wells-fargo {
     font-size: 16px;
+    text-align: center;
   }
 
   .welcome {
     font-size: 14px;
+    text-align: center;
   }
 
   .sign-off {
     font-size: 12px;
+    text-align: center;
+  }
+
+  .user-profile {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
   }
 
   .nav-link span {
     font-size: 12px;
   }
 
-  .flex-row-b .nav-link {
-    width: 90%;
+  .flex-row-efbe,
+  .flex-row-ca {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .flex-row-efbe a,
+  .flex-row-ca a {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .fix {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .fix .flex-row {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 

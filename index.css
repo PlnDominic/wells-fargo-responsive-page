@@ -1325,40 +1325,79 @@ body {
 @media screen and (max-width: 480px) {
   .main-container {
     padding: 0 5px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .rectangle {
-    transform: scale(0.8);
+    position: relative;
+    right: 0;
+    width: 100%;
+    transform: scale(1);
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 10px;
+  }
+
+  .background-shadow {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
   }
 
   .component-input {
-    max-width: 300px;
-    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    position: static;
+    margin-bottom: 15px;
   }
 
   .button {
-    max-width: 300px;
-    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    position: static;
+    margin-bottom: 15px;
   }
 
   .heading-good-afternoon {
     font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
   }
 
   .secure-account {
     font-size: 12px;
     text-align: center;
     padding: 0 10px;
+    margin-bottom: 15px;
   }
 
-  .background-horizontalborder .flex-row {
-    flex-direction: column;
-    align-items: center;
+  .background-horizontalborder {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
+  .background-horizontalborder .flex-row,
   .background-horizontalborder .flex-row-ca {
     flex-direction: column;
     align-items: center;
+  }
+
+  .background-horizontalborder .flex-row div,
+  .background-horizontalborder .flex-row-ca div {
+    margin: 5px 0;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url(./assets/images/8ba83152-62f9-4638-bd83-9ceedd698dce.png) no-repeat center center fixed;
+    background-size: cover;
   }
 }
 
